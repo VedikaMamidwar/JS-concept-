@@ -12,17 +12,18 @@ body {
 header {
     background: #282c34; /* Dark, neutral background */
     color: #61dafb; /* Light blue for contrast */
-    padding: 15px 0;
+    padding: 35px ;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Center-align header */
 }
 
 .navbar {
-    display: block;
-    justify-content: space-between;
-    align-items:flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -43,6 +44,16 @@ header {
 }
 
 .navbar ul li:hover {
+    color: #ffd700; /* Golden color on hover */
+}
+
+/* Scroll to Section */
+.navbar ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
     color: #ffd700; /* Golden color on hover */
 }
 
@@ -137,8 +148,8 @@ p {
     margin-top: 20px;
 }
 
-.concept-button {
-    background-color: #61dafb; /* Lighter blue for primary button color */
+.concept-button, .concept-button1 {
+    background-color: #ffd700;  /* Lighter blue for primary button color */
     color: #20232a;
     font-size: 15px;
     padding: 10px 20px;
@@ -148,18 +159,20 @@ p {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.concept-button:hover {
+.concept-button:hover, .concept-button1:hover {
     background-color: #ffd700; /* Golden color on hover */
     color: #20232a;
     transform: scale(1.05);
 }
 
-.concept-button:focus {
+.concept-button:focus, .concept-button1:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
 }
-.concept-button1 {
-    background-color: #ffd700; /* Lighter blue for primary button color */
+
+/* Button2 */
+.concept-button2{
+    background-color:#61dafb;  /* Lighter blue for primary button color */
     color: #20232a;
     font-size: 15px;
     padding: 10px 20px;
@@ -169,10 +182,15 @@ p {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.concept-button1:hover {
+.concept-button2:hover {
     background-color: #ffd700; /* Golden color on hover */
     color: #20232a;
     transform: scale(1.05);
+}
+
+.concept-button2:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
 }
 
 /* Contact Section Styles */
@@ -181,7 +199,6 @@ p {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 60px 20px;
-   
     color: #fff;
 }
 
@@ -207,12 +224,12 @@ p {
 .contact-info .gmail-no p {
     font-size: 1em;
     margin: 8px 0;
-    color:#ffd700 ;
+    color: #ffd700;
 }
 
 .contact-info .social-links a {
     margin: 0 10px;
-    color:#ffd700 ;
+    color: #ffd700;
     font-size: 1.5em;
     transition: color 0.3s ease;
 }
@@ -225,7 +242,7 @@ p {
 .contact-form h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
-    color:#ffd700 ;
+    color: #ffd700;
 }
 
 .contact-form input,
@@ -235,7 +252,6 @@ p {
     margin: 10px 0;
     border: none;
     border-radius: 4px;
-    
     color: #fff;
 }
 
@@ -249,8 +265,8 @@ p {
     padding: 12px;
     border: none;
     border-radius: 4px;
-   
-    color: #fff;
+    background-color: #61dafb;
+    color: #20232a;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -283,6 +299,10 @@ p {
     }
     .contact-form h2 {
         font-size: 1.6em;
+    }
+    .content-box {
+        flex-direction: column;
+        text-align: center;
     }
 }
 html {
